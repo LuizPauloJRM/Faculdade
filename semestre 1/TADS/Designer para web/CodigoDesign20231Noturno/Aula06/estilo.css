@@ -1,0 +1,28 @@
+h2{
+	background-color:#4F4F4F;
+	color:white;
+}
+body{
+	background-color:#DCDCDC;
+}
+h1{
+	background-color:black;
+	color:white;
+	text-align:center;
+}
+td{
+	background-color:#87CEFA;
+}
+.tituloTabela{
+	background-color:#4682B4;
+	color:white;
+}
+
+.campoIndefinido{
+	background-color:red;
+	font-size:200%;
+}
+
+.centralizar{
+	text-align:center;
+}

@@ -1,0 +1,27 @@
+.cor-menu{
+    background-color: rgb(36, 65, 73);
+    width: 100%;
+    padding: 45px;
+}
+
+.icones{
+    display: inline;
+    float: right;
+    margin-left: 600px;
+}
+
+
+.menu-principal h1{
+    display: inline;
+    padding: 8px;
+}
+
+.links-menu{
+    margin-left: 600px;
+    display: inline;
+}
+.links-menu a{
+    margin-right: 10px;
+}
+
+

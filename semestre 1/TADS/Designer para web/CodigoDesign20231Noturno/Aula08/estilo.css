@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+}
+.texto-branco{
+    color:white;
+}
+.fundoImagem{
+    background-image: url("https://th.bing.com/th/id/R.3f80ccb8805e6aabaaa780f4b82b4c6b?rik=1m82Mc9%2buazjUw&pid=ImgRaw&r=0");
+    background-repeat: no-repeat;
+}

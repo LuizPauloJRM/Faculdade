@@ -1,0 +1,22 @@
+footer{
+    background-color: #c4170c;
+    color: white;
+}
+
+.branco{
+    color: white;
+    font-size: 125%;
+}
+.vermelho{
+    color:#c4170c;
+    font-size: 125%;
+}
+
+.card-meu{
+    border: 0 none 0;
+    border-style: none;
+}
+
+#rodape{
+    font-size: 125%;
+}

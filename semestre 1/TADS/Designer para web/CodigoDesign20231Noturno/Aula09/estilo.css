@@ -1,0 +1,18 @@
+a:link{
+    background-color: aqua;
+    color: black;
+}
+a:visited{
+    background-color: brown;
+    color: aliceblue;
+}
+a:hover{
+    background-color: darkgray;
+}
+a:active{
+    background-color: crimson;
+    color: white;
+}
+a:focus{
+    font-size: 200px;
+}
