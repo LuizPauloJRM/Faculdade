@@ -29,6 +29,7 @@ Alter table Funcionarios add constraint unique(Nome);
 
 /*Criar uma trigger e logar atualizações*/
 delimiter//
+	
 
 
 
