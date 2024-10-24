@@ -9,12 +9,18 @@ package Exercicio03_Heranca;
 e em `Gato` para retornar "Miau".
 4. Adicione um método `public void info()` em `Animal` para exibir informações.
 5. Teste as classes no método `main`, criando instâncias de `Cachorro` e `Gato`.*/
+//Main.java
 public class ex03_Heranca {
-	  Animal cachorro = new Cachorro("Marley", 5);
-      cachorro.status();
-      cachorro.somAnimal();
+ public static void main(String[] args) {
+     // Criando um objeto Cachorro
+     Animal cachorro = new Cachorro("Marley", 5);
+     cachorro.info();       // Exibe as informações do cachorro
+     cachorro.fazerSom();   // Exibe "Au Au"
 
-      Animal gato = new Gato("Pequeno", 3);
-      gato.status();
-      gato.somAnimal();
+     // Criando um objeto Gato
+     Animal gato = new Gato("Pequeno", 3);
+     gato.info();           // Exibe as informações do gato
+     gato.fazerSom();       // Exibe "Miau"
+ }
 }
+
