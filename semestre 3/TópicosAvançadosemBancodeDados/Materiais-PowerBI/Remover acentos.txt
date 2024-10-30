@@ -1,0 +1,72 @@
+Parte 1: criar a função
+1) abrir o editor do power query
+2) selecionar "Nova Fonte"
+3) escolher a opção "Consulta Nula"
+4) copiar o código abaixo
+5) mudar o nome da consulta para "remover_acentos", por exemplo
+
+Parte 2: aplicar a função
+1) abrir o editor do power query
+2) selecionar a coluna que quer tirar o acento
+3) selecionar a aba "Transformar" da barra de menu
+4) selecionar "formato"
+5) selecionar a opção "Maiúscula", por exemplo
+6) trocar o nome da função "text.upper" para "remover_acentos"
+7) finalizar a chamada da função no ícone check
+
+
+= (Texto as text) =>
+let
+ListaAcentos = 
+ { 
+    {"à","a"},
+    {"á","a"},
+    {"â","a"},
+    {"ã","a"},
+    {"ä","a"},
+    {"è","e"},
+    {"é","e"},
+    {"ê","e"},
+    {"ë","e"},
+    {"ì","i"},
+    {"í","i"},
+    {"î","i"},
+    {"ï","i"},
+    {"ò","o"},
+    {"ó","o"},
+    {"ô","o"},
+    {"õ","o"},
+    {"ö","o"},
+    {"ù","u"},
+    {"ú","u"},
+    {"û","u"},
+    {"ü","u"},
+    {"À","A"},
+    {"Á","A"},
+    {"Â","A"},
+    {"Ã","A"},
+    {"Ä","A"},
+    {"È","E"},
+    {"É","E"},
+    {"Ê","E"},
+    {"Ë","E"},
+    {"Ì","I"},
+    {"Í","I"},
+    {"Î","I"},
+    {"Ò","O"},
+    {"Ó","O"},
+    {"Ô","O"},
+    {"Õ","O"},
+    {"Ö","O"},
+    {"Ù","U"},
+    {"Ú","U"},
+    {"Û","U"},
+    {"Ü","U"},
+    {"ç","c"},
+    {"Ç","C"},
+    {"ñ","n"},
+    {"Ñ","N"}
+ }
+
+in
+   Text.Combine(List.ReplaceMatchingItems(Text.ToList(Texto), ListaAcentos))
