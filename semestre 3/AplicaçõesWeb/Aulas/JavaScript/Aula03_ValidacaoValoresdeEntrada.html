@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <p>Entre com um número maior ou igual a 10</p>
+    <input id="numero" type="number" />
+    <button type="button" onclick="minhaFuncao();">Validar</button>
+    <p id="exemplo"></p>
+    <script type="text/javascript">
+      function minhaFuncao() {
+        var x, text;
+        x = document.getElementById("numero").value;
+        if (isNaN(x) || x < 10) {
+          text = "Valor inválido";
+        } else {
+          text = "Valor válido";
+        }
+        document.getElementById("exemplo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
