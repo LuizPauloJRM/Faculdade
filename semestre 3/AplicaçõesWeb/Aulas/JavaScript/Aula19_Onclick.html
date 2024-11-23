@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Cor de Fundo:</label>
+        <input type="text" id="cor" placeholder="Digite uma cor">
+        <br>
+        <label>URL da Imagem:</label>
+        <input type="text" id="imagem" placeholder="Cole o link da imagem">
+        <br>
+        <button type="button" onclick="atualizarPagina()">Atualizar</button>
+    </form>
+    <img id="img" src="" alt="Imagem" width="300" style="display: block; margin-top: 20px;">
+
+    <script>
+        function atualizarPagina() {
+            // Atualizar cor
+            const cor = document.getElementById('cor').value;
+            document.body.style.backgroundColor = cor;
+
+            // Atualizar imagem
+            const url = document.getElementById('imagem').value;
+            const img = document.getElementById('img');
+            img.src = url;
+            img.alt = "Nova Imagem";
+        }
+    </script>
+</body>
+
+</html>

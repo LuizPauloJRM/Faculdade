@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e funções javascript</title>
+</head>
+
+<body>
+    <h1>Calculadora de Dobro</h1>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="calcularDobro()">Calcular Dobro</button>
+    <p id="saida"></p>
+
+    <script>
+        function calcularDobro() {
+            const numero = document.getElementById('numero').value;
+            const resultado = numero * 2;
+            document.getElementById('saida').textContent = `O dobro é: ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

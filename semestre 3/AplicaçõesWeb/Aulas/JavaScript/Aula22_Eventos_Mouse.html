@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function executaEventoOnclick() {
+            x = 30;
+            window.alert(x);
+            window.document.bgColor = 'red';
+        }
+        function executaEventoOnMouseMove() {
+            window.alert("você passou o mouse sobre o botão imagem");
+        }
+    </script>
+    <form>
+        <input type=button value="mude a cor" onclick="executaEventoOnclick( )">
+        <input type=button value="imagem" onmouseMove="executaEventoOnMouseMove( )">
+        <br>Escreva seu primeiro nome
+        <input type="text" value="primeiro nome" onfocus="alert('Introduza apenas o seu primeiro nome');">
+    </form>
+</body>
+
+</html>

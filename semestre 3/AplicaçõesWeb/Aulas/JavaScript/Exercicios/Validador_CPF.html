@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador CPF</title>
+</head>
+
+<body>
+    <h1>Validador de CPF</h1>
+    <form>
+        <label>Digite o CPF (9 dígitos):</label>
+        <input type="text" id="cpf" maxlength="9" placeholder="Somente números">
+        <button type="button" onclick="validarCPF()">Validar CPF</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDV1(cpf) {
+            let soma = 0;
+            for (let i = 0; i < 9; i++) {
+                soma += parseInt(cpf[i]) * (10 - i);
+            }
+            const resto = (soma * 10) % 11;
+            return resto === 10 ? 0 : resto;
+        }
+
+        function calcularDV2(cpf, dv1) {
+            let soma = 0;
+            for (let i = 0; i < 9; i++) {
+                soma += parseInt(cpf[i]) * (11 - i);
+            }
+            soma += dv1 * 2;
+            const resto = (soma * 10) % 11;
+            return resto === 10 ? 0 : resto;
+        }
+
+        function validarCPF() {
+            const cpf = document.getElementById('cpf').value;
+
+            if (isNaN(cpf) || cpf.length !== 9) {
+                document.getElementById('resultado').textContent = "CPF inválido! Digite apenas 9 números.";
+                return;
+            }
+
+            const dv1 = calcularDV1(cpf);
+            const dv2 = calcularDV2(cpf, dv1);
+            document.getElementById('resultado').textContent = `CPF completo: ${cpf}-${dv1}${dv2}`;
+        }
+    </script>
+</body>
+
+</html>

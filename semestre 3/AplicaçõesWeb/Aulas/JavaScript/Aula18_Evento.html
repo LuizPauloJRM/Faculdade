@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onclick</title>
+</head>
+
+<body>
+    <h1>Trocar cor de fundo</h1>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <script>
+        function mudarCor() {
+            const cores = ['red', 'blue', 'green', 'yellow', 'pink'];
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            document.body.style.backgroundColor = corAleatoria;
+        }
+    </script>
+</body>
+
+</html>

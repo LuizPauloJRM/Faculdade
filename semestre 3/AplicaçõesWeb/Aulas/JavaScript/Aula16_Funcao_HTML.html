@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função javascript</title>
+</head>
+
+<body>
+    <h1>Calculo da área<h1>
+            <p id="resultado"></p>
+            <script>
+                // Função para calcular a área
+                function calcularArea(base, altura) {
+                    return base * altura;
+                }
+
+                // Chamando a função e exibindo o resultado
+                const resultado = calcularArea(5, 10);
+                document.getElementById('resultado').textContent = `Área: ${resultado}m²`;
+            </script>
+</body>
+
+</html>
