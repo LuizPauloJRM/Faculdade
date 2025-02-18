@@ -20,10 +20,12 @@ public class Conta {//começo da classe
 	public void imprimirDados() {
 		System.out.println("Agencia: "+numAgencia+"\n"+"Conta: "+numConta+"\n"+"CPF: "+cpf+"\n"+"Saldo: "+saldo);
 	}
+	//Método depositar 
 	public void depositar(double valor) {
 		saldo = saldo + valor;
 		System.out.println("Depósito efetuado no valor R$ "+valor);		
 	}
+	//Método sacar 
 	public void sacar(double valor) {
 		saldo = saldo -valor;
 		System.out.println("Foi efetuado um saque no valor R$ "+valor);
