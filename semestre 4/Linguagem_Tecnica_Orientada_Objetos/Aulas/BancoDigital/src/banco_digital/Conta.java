@@ -24,4 +24,8 @@ public class Conta {//começo da classe
 		saldo = saldo + valor;
 		System.out.println("Depósito efetuado no valor R$ "+valor);		
 	}
+	public void sacar(double valor) {
+		saldo = saldo -valor;
+		System.out.println("Foi efetuado um saque no valor R$ "+valor);
+	}
 }//término da classe 

@@ -11,5 +11,9 @@ public class Banco {
 		c2.depositar(600);
 		c1.imprimirDados();
 		c2.imprimirDados();
+		c1.sacar(200);
+		c1.imprimirDados();
+		c2.sacar(50);
+		c2.imprimirDados();
 	}
 }
