@@ -11,23 +11,31 @@
 <body>
     <h1 class="corAgua">Calculadora</h1>
     <form>
-        <input type="text" id="valor1" placeholder="Valor 1">
-        <input type="text" id="valor2" placeholder="Valor 2">
-        <input type="text" id="resultado" placeholder="Resultado">
+        Resultado
+        <input type="text" disabled id="result">
         <br>
-        <button type="button" onclick="adicionarNumero(1)">1</button>
-        <button type="button" onclick="adicionarNumero(2)">2</button>
-        <button type="button" onclick="adicionarNumero(3)">3</button>
-        <button type="button" onclick="adicionarNumero(4)">4</button>
-        <button type="button" onclick="adicionarNumero(5)">5</button>
-        <button type="button" onclick="adicionarNumero(6)">6</button>
-        <button type="button" onclick="adicionarNumero(7)">7</button>
-        <button type="button" onclick="adicionarNumero(8)">8</button>
-        <button type="button" onclick="adicionarNumero(9)">9</button>
+        <input type="button" onclick="num(7)" value="7">
+        <input type="button" onclick="num(8)" value="8">
+        <input type="button" onclick="num(9)" value="9">
         <br>
-        <button type="button" onclick="somar()">Somar</button>
+        <input type="button" onclick="num(4)" value="4">
+        <input type="button" onclick="num(5)" value="5">
+        <input type="button" onclick="num(6)" value="6">
+        <br>
+        <input type="button" onclick="num(1)" value="1">
+        <input type="button" onclick="num(2)" value="2">
+        <input type="button" onclick="num(3)" value="3">
+        <br>
+        <input type="button" onclick="num(0)" value="0">
+        <br><br>
+        Número
+        <input disabled type="number" id="v1" maxlength="10">
+        <br>
+        <input type="button" onclick="somar()" value="Somar">
+        <p id="resultado">Resultado: </p>
     </form>
-    <script src="js/codigo.js"></script>
+    <script src="js/codigo.js">
+    </script>
 </body>
 
 </html>
