@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Define que o documento usa UTF-8, permitindo acentos corretamente -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Faz com que o layout seja responsivo em telas menores (celulares) -->
+
+    <title>Lista de Tarefas - Exercício</title>
+
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <main>
+        <!-- Título principal da aplicação -->
+        <h1>Lista de Tarefas</h1>
+
+        <!-- Formulário usado para adicionar novas tarefas -->
+        <!-- Usamos <form> porque assim o "Enter" no input também dispara o evento de envio -->
+        <form id="form-task" aria-label="Formulário adicionar tarefa">
+            <!-- Rótulo para o campo de texto -->
+            <label for="task-input">Nova tarefa</label>
+
+            <!-- Campo de entrada onde o usuário digita a tarefa -->
+            <input type="text" id="task-input" placeholder="Digite a tarefa" autocomplete="off">
+
+            <!-- Botão que dispara o envio do formulário -->
+            <button type="submit" id="add-btn">Adicionar</button>
+        </form>
+
+        <!-- Lista não ordenada onde as tarefas serão inseridas dinamicamente -->
+        <!-- aria-live="polite" informa leitores de tela que o conteúdo pode mudar -->
+        <ul id="task-list" aria-live="polite"></ul>
+    </main>
+
+    <!-- Arquivo JavaScript com toda a lógica -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

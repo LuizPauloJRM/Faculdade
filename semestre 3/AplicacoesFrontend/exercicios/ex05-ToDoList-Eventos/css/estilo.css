@@ -1,0 +1,35 @@
+/* Estilo base da página */
+body {
+    font-family: Arial, sans-serif; /* Define fonte padrão */
+    padding: 20px;                  /* Espaçamento interno */
+    background: #f7f7f7;            /* Cor de fundo clara */
+}
+
+/* Centraliza o conteúdo e limita a largura */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Remove marcadores padrão da lista UL */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Estilo de cada item da lista */
+#task-list li {
+    padding: 10px 12px;          /* Espaçamento interno */
+    margin-bottom: 8px;          /* Espaço entre tarefas */
+    background: #fff;            /* Fundo branco */
+    border-radius: 4px;          /* Cantos arredondados */
+    cursor: pointer;             /* Mãozinha no hover */
+    user-select: none;           /* Impede selecionar texto ao clicar */
+}
+
+/* Estilo aplicado quando a tarefa está concluída */
+#task-list li.done {
+    text-decoration: line-through; /* Risca o texto */
+    opacity: 0.6;                  /* Deixa mais “apagado” */
+}
