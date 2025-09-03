@@ -1,0 +1,17 @@
+/* Cor de fundo da página */
+body {
+    background-color: beige;
+}
+
+/* Classe que pinta o texto em azul aqua */
+.corAgua {
+    color: aqua;
+}
+
+/* Define o tamanho da imagem */
+.tamanhoMedio {
+    height: 5%;  /* altura em relação à tela (muito pequena) */
+    width: 5%;   /* largura em relação à tela (muito pequena) */
+}
+/* Obs: usando porcentagem, a imagem pode ficar muito pequena.
+   Melhor usar "px" ou "max-width". Exemplo: width: 150px; height: auto; */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define que o documento usa codificação UTF-8 (suporte a acentos, etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz com que a página seja responsiva em dispositivos móveis -->
+
+    <title>Document</title>
+    <!-- Título da aba do navegador -->
+
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- Importa o arquivo de estilos CSS -->
+</head>
+
+<body>
+    <!-- Título principal da página -->
+    <h1 class="corAgua">Título</h1>
+
+    <!-- Início do formulário -->
+    <form>
+        <!-- Campo que mostra o resultado (disabled = usuário não pode digitar) -->
+        Resultado
+        <input type="text" disabled id="result">
+        <br>
+
+        <!-- Botões numéricos, cada um chama a função num(valor) no JS -->
+        <input type="button" onclick="num(7)" value="7">
+        <input type="button" onclick="num(8)" value="8">
+        <input type="button" onclick="num(9)" value="9">
+        <br>
+        <input type="button" onclick="num(4)" value="4">
+        <input type="button" onclick="num(5)" value="5">
+        <input type="button" onclick="num(6)" value="6">
+        <br>
+        <input type="button" onclick="num(1)" value="1">
+        <input type="button" onclick="num(2)" value="2">
+        <input type="button" onclick="num(3)" value="3">
+        <br>
+        <input type="button" onclick="num(0)" value="0">
+        <br><br>
+
+        <!-- Outro campo para número (também desabilitado no seu código atual) -->
+        Número
+        <input disabled type="number" id="v1" maxlength="10">
+        <br>
+
+        <!-- Botão que chama a função somar() -->
+        <input type="button" onclick="somar()" value="Somar">
+
+        <!-- Onde será exibido o resultado final -->
+        <p id="resultado">Resultado: </p>
+
+        <!-- Botão para limpar os campos do formulário -->
+        <input type="reset" value="Limpar">
+    </form>
+
+    <!-- Imagem inicial da calculadora -->
+    <!-- Ao clicar, chama a função alteraImagem() -->
+    <img src="assets/calculadora.png" class="tamanhoMedio" onclick="alteraImagem()" id="imagem">
+
+    <!-- Importa o arquivo com funções da calculadora -->
+    <script src="js/calculadora.js"></script>
+
+    <!-- Importa o arquivo com a função de trocar imagem -->
+    <script src="js/imagem.js"></script>
+</body>
+
+</html>
