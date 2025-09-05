@@ -1,0 +1,16 @@
+<!-- Pegando valores do HTML -->
+<input type="text" id="v1">
+<input type="text" id="v2">
+<p id="resultado">Resultado é: </p>
+<input type="button" value="+" onclick="somar()">
+
+<script>
+    function somar() {
+        var v1 = document.getElementById("v1").value;
+        var v2 = document.getElementById("v2").value;
+        var resultado = parseInt(v1) + parseInt(v2);
+
+        document.getElementById("resultado").innerHTML =
+            "Resultado: " + resultado;
+    }
+</script>
