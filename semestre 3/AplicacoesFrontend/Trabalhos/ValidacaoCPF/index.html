@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro e Verificação de CPF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cadastro de CPF</h1>
+
+    <h2>Cadastrar</h2>
+    <form id="cadForm">
+        <input type="text" id="nome" placeholder="Nome"><br><br>
+        <input type="text" id="cpf" placeholder="CPF (somente números)"><br><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Verificar CPF</h2>
+    <input type="text" id="cpfVerificar" placeholder="Digite o CPF">
+    <button id="verificarBtn">Verificar</button>
+
+    <p id="msg"></p>
+
+    <script src="script/validacaoCPF.js"></script>
+</body>
+
+</html>
