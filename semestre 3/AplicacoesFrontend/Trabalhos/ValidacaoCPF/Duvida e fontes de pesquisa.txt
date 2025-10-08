@@ -1,0 +1,5 @@
+Fiz a logica porem não consegui validar um cadastro para que ao clicar em validar possa encontrar o cpf 
+
+Fontes de pesquisa 
+ https://www.geradorcpf.com/algoritmo_do_cpf.htm
+ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/ 

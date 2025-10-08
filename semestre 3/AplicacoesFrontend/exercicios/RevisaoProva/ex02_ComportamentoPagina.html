@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Recursiva - Fatorial</title>
+</head>
+
+<body>
+    <h2>Calcular Fatorial (Função Recursiva)</h2>
+    <label>Informe um número:</label>
+    <input type="number" id="numero">
+    <button onclick="calcular()">Calcular</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        // Função recursiva para calcular o fatorial
+        function fatorial(n) {
+            if (n === 0 || n === 1) {
+                return 1; // caso base
+            } else {
+                return n * fatorial(n - 1); // chamada recursiva
+            }
+        }
+
+        // Função chamada ao clicar no botão
+        function calcular() {
+            const num = parseInt(document.getElementById('numero').value);
+            const resultado = fatorial(num);
+            document.getElementById('resultado').innerText =
+                `O fatorial de ${num} é ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

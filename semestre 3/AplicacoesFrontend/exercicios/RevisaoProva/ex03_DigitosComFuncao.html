@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Soma dos Dígitos com Função Recursiva</title>
+
+    <script>
+        // Função principal chamada quando o usuário clica em "Confirmar"
+        function funcao(num) {
+            // Converte o valor recebido (que é string) para número
+            num = Number(num);
+
+            // Chama a função recursiva 'n' e mostra o resultado em um alerta
+            // n(num) irá retornar a soma de todos os dígitos do número informado
+            alert("A soma dos dígitos é: " + n(num));
+        }
+
+        // Função recursiva que calcula a soma dos dígitos de um número
+        function n(num) {
+
+            // Caso base da recursão:
+            // Quando o número for 0, retornamos 0 e encerramos as chamadas recursivas.
+            if (num == 0) {
+                return 0;
+            }
+
+            // Passo recursivo:
+            // num % 10 pega o último dígito do número.
+            // parseInt(num / 10) remove o último dígito (divisão inteira).
+            // Somamos o último dígito com o resultado da função aplicada ao número reduzido.
+            return (num % 10) + n(parseInt(num / 10, 10));
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Soma dos Dígitos - Função Recursiva</h2>
+
+    <form>
+        <label><b>Número:</b></label><br>
+        <!-- Campo onde o usuário digita o número -->
+        <input type="number" name="num" required>
+
+        <!-- Botão que chama a função 'funcao' ao clicar -->
+        <!-- O "return false" impede que o formulário recarregue a página -->
+        <input type="submit" value="Confirmar" onClick="funcao(num.value); return false;">
+    </form>
+</body>
+
+</html>

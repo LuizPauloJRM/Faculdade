@@ -3,7 +3,7 @@
  * MATRICULA: 202310962
  * fontes de pesquisa: 
  * https://www.geradorcpf.com/algoritmo_do_cpf.htm
- * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+ * https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/  
  * 
  * 
  * Cpf tem 11 digitos 
@@ -35,7 +35,7 @@ function validarCPF(cpf) {
 
     /*Validação do digito 1*/
     let soma = 0;
-    for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+    for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
     let digito1 = (soma % 11 < 2) ? 0 : 11 - (soma % 11);
     if (digito1 !== parseInt(cpf.charAt(9))) return false;
     soma = 0;
