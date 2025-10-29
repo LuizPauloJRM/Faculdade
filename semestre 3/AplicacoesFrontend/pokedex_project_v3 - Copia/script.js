@@ -29,6 +29,7 @@ async function getPokemon() {
    * Se a resposta não for bem-sucedida (status diferente de 200), uma mensagem de erro é exibida.
    * Caso contrário, os dados do Pokémon são extraídos da resposta JSON e exibidos na página.
    */
+  /*Fazendo requisição api pokedex */
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
   // Verifica se a requisição foi bem-sucedida

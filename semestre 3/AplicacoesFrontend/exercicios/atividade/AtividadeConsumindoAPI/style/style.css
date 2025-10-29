@@ -1,0 +1,65 @@
+/* Estilo base da página */
+body {
+  font-family: Arial, sans-serif;
+  display: flex; /* Centraliza o container na tela */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff; /* Azul claro */
+  margin: 0;
+}
+
+/* Container principal da Pokédex */
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+/* Campo de entrada */
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: calc(100% - 22px); /* Ajuste para preencher o container */
+}
+
+/* Botão de busca */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Card onde aparecem as informações */
+.card {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagens do Pokémon */
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Nome do Pokémon */
+h2 {
+  margin: 10px 0;
+}
