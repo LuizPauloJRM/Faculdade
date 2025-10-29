@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Interativa</title>
+
+    <!-- Bootstrap CSS - Necessário para o carousel e componentes interativos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Partículas de fundo animadas -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Container principal da Pokédex -->
+    <div class="container-custom">
+        <!-- Logo e título com animação -->
+        <div class="header-pokemon">
+            <div class="pokeball-logo">
+                <div class="pokeball-top"></div>
+                <div class="pokeball-middle"></div>
+                <div class="pokeball-bottom"></div>
+            </div>
+            <h1 class="title-animated">Pokédex</h1>
+        </div>
+
+        <!-- Tabs para alternar entre Busca e Arena de Batalha -->
+        <ul class="nav nav-tabs mb-3" id="pokedexTabs" role="tablist">
+            <!-- Tab de Busca/Exploração -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-panel"
+                    type="button" role="tab" aria-controls="search-panel" aria-selected="true">
+                    🔍 Explorar
+                </button>
+            </li>
+            <!-- Tab da Arena de Batalha -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="battle-tab" data-bs-toggle="tab" data-bs-target="#battle-panel"
+                    type="button" role="tab" aria-controls="battle-panel" aria-selected="false">
+                    ⚔️ Arena de Batalha
+                </button>
+            </li>
+        </ul>
+
+        <!-- Conteúdo das Tabs -->
+        <div class="tab-content" id="pokedexTabsContent">
+
+            <!-- PAINEL DE BUSCA/EXPLORAÇÃO -->
+            <div class="tab-pane fade show active" id="search-panel" role="tabpanel" aria-labelledby="search-tab">
+                <!-- Barra de busca aprimorada -->
+                <div class="search-container">
+                    <input type="number" id="pokemonId" placeholder="Digite o número do Pokémon" min="1" max="1010">
+                    <button class="search-btn" onclick="getPokemon()">
+                        <span class="btn-text">Buscar</span>
+                        <span class="btn-icon">🔍</span>
+                    </button>
+                </div>
+
+                <!-- Botões de navegação rápida -->
+                <div class="quick-nav">
+                    <button class="quick-btn" onclick="getRandomPokemon()">🎲 Aleatório</button>
+                    <button class="quick-btn" onclick="getPreviousPokemon()">⬅️ Anterior</button>
+                    <button class="quick-btn" onclick="getNextPokemon()">➡️ Próximo</button>
+                </div>
+
+                <!-- Loading spinner -->
+                <div id="loadingSpinner" class="spinner-container" style="display: none;">
+                    <div class="pokeball-spinner">
+                        <div class="pokeball-spin"></div>
+                    </div>
+                    <p>Procurando Pokémon...</p>
+                </div>
+
+                <!-- Div onde as informações do Pokémon serão exibidas dinamicamente -->
+                <div id="pokemonInfo" class="card"></div>
+            </div>
+
+            <!-- PAINEL DA ARENA DE BATALHA -->
+            <div class="tab-pane fade" id="battle-panel" role="tabpanel" aria-labelledby="battle-tab">
+
+                <!-- Instruções da Arena -->
+                <div class="battle-instructions">
+                    <p>⚔️ Selecione dois Pokémon para batalhar!</p>
+                </div>
+
+                <!-- Container para seleção dos dois Pokémon -->
+                <div class="battle-selection">
+
+                    <!-- Seleção do Pokémon 1 -->
+                    <div class="pokemon-selector">
+                        <h3>🔴 Pokémon 1</h3>
+                        <input type="number" id="pokemon1Id" placeholder="ID do Pokémon 1" min="1" max="1010">
+                        <button class="select-btn" onclick="selectPokemon(1)">Selecionar</button>
+                        <!-- Área onde o Pokémon 1 será exibido após seleção -->
+                        <div id="pokemon1Card" class="battle-card"></div>
+                    </div>
+
+                    <!-- VS no meio -->
+                    <div class="vs-divider">
+                        <span class="vs-text">VS</span>
+                    </div>
+
+                    <!-- Seleção do Pokémon 2 -->
+                    <div class="pokemon-selector">
+                        <h3>🔵 Pokémon 2</h3>
+                        <input type="number" id="pokemon2Id" placeholder="ID do Pokémon 2" min="1" max="1010">
+                        <button class="select-btn" onclick="selectPokemon(2)">Selecionar</button>
+                        <!-- Área onde o Pokémon 2 será exibido após seleção -->
+                        <div id="pokemon2Card" class="battle-card"></div>
+                    </div>
+
+                </div>
+
+                <!-- Botão de Batalha (aparece só quando ambos os Pokémon são selecionados) -->
+                <div id="battleButtonContainer" style="display: none; text-align: center; margin-top: 20px;">
+                    <button class="battle-start-btn" onclick="startBattle()">
+                        ⚔️ INICIAR BATALHA!
+                    </button>
+                </div>
+
+                <!-- Área de resultado da batalha -->
+                <div id="battleResult" class="battle-result"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle - Necessário para os controles do carousel e tabs funcionarem -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script customizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>
