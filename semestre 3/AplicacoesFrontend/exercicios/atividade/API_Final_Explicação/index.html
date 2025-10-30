@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <!-- Importa o CSS do Bootstrap (framework para estilos e componentes como o carousel) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Importa o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Container principal que centraliza e agrupa os elementos -->
+    <div class="container">
+        <h1>Pokédex</h1>
+
+        <!-- Campo para o usuário digitar o número do Pokémon -->
+        <input type="number" id="pokemonId" placeholder="Digite o número do Pokémon" min="1">
+
+        <!-- Botão que chama a função getPokemon() -->
+        <button onclick="getPokemon()">Buscar</button>
+
+        <!-- Estrutura do carousel do Bootstrap, que exibirá as imagens do Pokémon -->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner" id="carousel">
+                <!-- Aqui dentro, o JavaScript vai inserir dinamicamente as imagens -->
+            </div>
+
+            <!-- Botões de navegação do carousel (anterior e próximo) -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Div onde as informações (altura, peso, tipos, etc.) serão exibidas -->
+        <div id="pokemonInfo" class="card"></div>
+    </div>
+
+    <!-- Importa o JS do Bootstrap (para fazer o carousel funcionar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Importa o script com a lógica da Pokédex -->
+    <script src="script.js"></script>
+</body>
+
+</html>
