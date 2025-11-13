@@ -1,0 +1,9 @@
+<button onclick="iniciar()">Iniciar</button>
+
+<script>
+    function iniciar() {
+        let tarefasIniciais = ["Estudar JavaScript", "Fazer exercício", "Ler um livro"]
+        localStorage.setItem("tarefas", JSON.stringify(tarefasIniciais))
+        location.href = "visualizar.html"
+    }
+</script>

@@ -1,0 +1,22 @@
+<ul id="lista"></ul>
+<button onclick="novaTarefa()">Nova Tarefa</button>
+
+<script>
+    function carregarTarefas() {
+        let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
+        const lista = document.getElementById("lista")
+        lista.innerHTML = ""
+
+        tarefas.forEach(function (tarefa) {
+            const li = document.createElement("li")
+            li.textContent = tarefa
+            lista.appendChild(li)
+        })
+    }
+
+    function novaTarefa() {
+        location.href = "adicionar.html"
+    }
+
+    carregarTarefas()
+</script>

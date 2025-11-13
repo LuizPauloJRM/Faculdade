@@ -1,0 +1,20 @@
+<input id="tarefa" placeholder="Digite uma tarefa" />
+<button onclick="adicionar()">Adicionar</button>
+<button onclick="irParaVisualizar()">Ver Tarefas</button>
+
+<script>
+    function adicionar() {
+        const texto = document.getElementById("tarefa").value
+        if (!texto) return
+
+        let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
+        tarefas.push(texto)
+        localStorage.setItem("tarefas", JSON.stringify(tarefas))
+
+        document.getElementById("tarefa").value = ""
+    }
+
+    function irParaVisualizar() {
+        location.href = "visualizar.html"
+    }
+</script>
