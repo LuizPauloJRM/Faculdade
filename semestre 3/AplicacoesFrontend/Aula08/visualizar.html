@@ -15,6 +15,8 @@
         //innerHTML define o conteúdo HTML interno de um elemento limpar a lista antes de adicionar itens
         lista.innerHTML = ""
         //Iterar sobre as tarefas e criar elementos de lista
+        //forEach itera sobre cada item do array 20 elementos roda 20 vezes
+        //Entao tarefa representa cada item do array forEach(function(tarefa){...}) para cada tarefa faça isso  entre as {} fica o que vai ser feito const li = document.createElement("li") li.textContent = tarefa lista.appendChild(li)  
         tarefas.forEach(function (tarefa) {
             //Criar um item de lista para cada tarefa
             //document.createElement cria um elemento HTML um li = item de lista li.textContent = tarefa define o texto do item de lista
