@@ -12,6 +12,7 @@
         //var = valor que pode mudar (mais antigo, evitar usar)
         let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
         const lista = document.getElementById("lista")
+        //innerHTML define o conteúdo HTML interno de um elemento limpar a lista antes de adicionar itens
         lista.innerHTML = ""
         //Iterar sobre as tarefas e criar elementos de lista
         tarefas.forEach(function (tarefa) {
