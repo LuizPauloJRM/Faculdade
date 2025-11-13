@@ -2,21 +2,34 @@
 <button onclick="novaTarefa()">Nova Tarefa</button>
 
 <script>
+    //Funções tem parametros e retornos
+    //Eventos e funções JavaScript
+    //Carregar tarefas do LocalStorage e exibir na lista
     function carregarTarefas() {
+        //Obter tarefas do LocalStorage let const e var pode declarar variaveis de 3 formas diferentes
+        //const = valor constante que nao muda
+        //let = valor que pode mudar
+        //var = valor que pode mudar (mais antigo, evitar usar)
         let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
         const lista = document.getElementById("lista")
         lista.innerHTML = ""
-
+        //Iterar sobre as tarefas e criar elementos de lista
         tarefas.forEach(function (tarefa) {
+            //Criar um item de lista para cada tarefa
+            //document.createElement cria um elemento HTML um li = item de lista li.textContent = tarefa define o texto do item de lista
             const li = document.createElement("li")
             li.textContent = tarefa
+            //Adicionar o item de lista à lista appendChild adiciona um elemento filho a um elemento pai 
+            //filho = li pai = lista
+            //pai = document.getElementById("lista")
             lista.appendChild(li)
         })
     }
-
+    //Navegar para a página de adicionar nova tarefa
     function novaTarefa() {
+        //location.href redireciona para outra página
         location.href = "adicionar.html"
     }
-
+    //Carregar as tarefas ao carregar a página
     carregarTarefas()
 </script>

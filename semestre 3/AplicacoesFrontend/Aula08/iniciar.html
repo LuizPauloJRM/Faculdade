@@ -1,9 +1,12 @@
 <button onclick="iniciar()">Iniciar</button>
 
 <script>
+    //Inicializar o LocalStorage com algumas tarefas e navegar para visualizar.html
     function iniciar() {
         let tarefasIniciais = ["Estudar JavaScript", "Fazer exercício", "Ler um livro"]
+        //localStorage armazena dados no navegador do usuário setItem define um item no LocalStorage json.stringify converte um objeto JavaScript em uma string JSON strungify = "transformar em string"
         localStorage.setItem("tarefas", JSON.stringify(tarefasIniciais))
+        //location.href redireciona para outra página
         location.href = "visualizar.html"
     }
 </script>

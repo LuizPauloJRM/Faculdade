@@ -3,17 +3,18 @@
 <button onclick="irParaVisualizar()">Ver Tarefas</button>
 
 <script>
+    //Adicionar nova tarefa ao LocalStorage document.getElementById obtém um elemento HTML pelo ID
     function adicionar() {
         const texto = document.getElementById("tarefa").value
         if (!texto) return
-
+        //Obter tarefas existentes do LocalStorage, adicionar a nova tarefa e salvar novamente no LocalStorage getItem obtém um item do LocalStorage json.parse converte uma string JSON em um objeto JavaScript parse = "transformar em objeto" 
         let tarefas = JSON.parse(localStorage.getItem("tarefas")) || []
         tarefas.push(texto)
         localStorage.setItem("tarefas", JSON.stringify(tarefas))
 
         document.getElementById("tarefa").value = ""
     }
-
+    //Navegar para a página de visualizar tarefas   
     function irParaVisualizar() {
         location.href = "visualizar.html"
     }
